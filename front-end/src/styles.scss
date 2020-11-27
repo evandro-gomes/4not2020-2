@@ -2,3 +2,34 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+#content {
+    margin: 40px;
+}
+
+.mat-table {
+    width: 100%;
+}
+
+.cell-align-right {
+    text-align: right !important;
+}
+
+.cell-align-center {
+    text-align: center !important;
+}
+
+// Esconder botões editar e excluir
+.mat-row .mat-raised-button {
+    visibility: hidden;
+}
+
+// Exibe botões na linha do mouse
+.mat-row:hover .mat-raised-button {
+    visibility: visible;
+}
+
+// Coloca leve destaque na linha sob o mouse
+.mat-row:hover {
+    filter: brightness(120%)
+}
