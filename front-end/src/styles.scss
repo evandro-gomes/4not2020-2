@@ -54,5 +54,14 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
       max-width: 500px;
       width: 100%;
       margin-right: 30px;
-   }
+    }    
+}
+
+.form-buttons {
+    background: transparent;
+
+    mat-toolbar-row{
+        display: felx;
+        justify-content: space-around;
+    }
 }
