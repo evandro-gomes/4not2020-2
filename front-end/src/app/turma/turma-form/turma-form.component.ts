@@ -25,6 +25,17 @@ export class TurmaFormComponent implements OnInit {
   professores: any = []
   salasAula: any = []
 
+  // Dias da semana
+  diasSemana: any = [
+    {val: 'dom', descr: 'Domingo'},
+    {val: 'seg', descr: 'Segunda-feira'},
+    {val: 'ter', descr: 'Terça-feira'},
+    {val: 'qua', descr: 'Quarta-feira'},
+    {val: 'qui', descr: 'Quinta-feira'},
+    {val: 'sex', descr: 'Sexta-feira'},
+    {val: 'sab', descr: 'Sábado'},
+  ]
+
   constructor(
     private turmaSrv: TurmaService,
     // Services das entidades relacionadas
