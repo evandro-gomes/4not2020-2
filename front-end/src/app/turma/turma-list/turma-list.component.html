@@ -14,7 +14,7 @@
 
   <!-- Nome Column -->
   <ng-container matColumnDef="nome">
-    <th mat-header-cell *matHeaderCellDef> turma </th>
+    <th mat-header-cell *matHeaderCellDef> Turma </th>
     <td mat-cell *matCellDef="let turma"> {{ turma.nome }} </td>
   </ng-container>
 
@@ -24,7 +24,7 @@
     <!-- Quando um atributo é relacionado e está populado, 
     é necessário descer mais um nível ppara capturar o objeto
     O operador ? evata erros caso o objeto não exista-->
-    <td mat-cell *matCellDef="let turma"> {{ turma.curso?.nome }} </td>
+    <td mat-cell *matCellDef="let turma"> {{ turma.curso?.nome }}  ({{ turma.curso?.nivel }}) </td>
   </ng-container>
   
   <!-- Professor Column -->
@@ -51,6 +51,15 @@
   <ng-container matColumnDef="sala_aula">
     <th mat-header-cell *matHeaderCellDef> Sala </th>
     <td mat-cell *matCellDef="let turma"> {{ turma.sala_aula?.nome }} </td>
+  </ng-container>
+
+  <!-- Período Column -->
+  <ng-container matColumnDef="periodo">
+    <th mat-header-cell *matHeaderCellDef> Período </th>
+    <td mat-cell *matCellDef="let turma"> 
+      {{ turma.data_inicial | date:'dd/MM/yyyy'}} &mdash; 
+      {{ turma.data_final | date:'dd/MM/yyyy'}}
+    </td>
   </ng-container>
 
   <!-- Editar Column -->

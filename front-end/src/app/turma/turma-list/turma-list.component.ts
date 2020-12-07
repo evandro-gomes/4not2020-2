@@ -11,7 +11,7 @@ export class TurmaListComponent implements OnInit {
   // entidade no plural
   turmas: any = []
   // colunas exibidas na tabela e sua ordem
-  displayedColumns: string[] = ['nome', 'curso', 'professor', 'dias_semana', 'horario', 'sala_aula', 'editar', 'excluir']
+  displayedColumns: string[] = ['nome', 'curso', 'professor', 'dias_semana', 'horario', 'sala_aula', 'periodo', 'editar', 'excluir']
 
   constructor(
     private turmaSrv: TurmaService,

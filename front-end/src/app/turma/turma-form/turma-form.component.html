@@ -59,6 +59,18 @@
     </mat-select>
   </mat-form-field>
 
+  <mat-form-field>
+    <mat-label>Horário Inicial</mat-label>
+    <input matInput placeholder="Informe o horário inicial" [(ngModel)]="turma.horario_inicial" 
+    name="horario_inicial" required mask="00:00" [dropSpecialCharacters]="false"> 
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Horário Final</mat-label>
+    <input matInput placeholder="Informe o horário final" [(ngModel)]="turma.horario_final" 
+    name="horario_final" required mask="00:00" [dropSpecialCharacters]="false"> 
+  </mat-form-field>
+
   <mat-toolbar class="form-buttons">      
     <mat-toolbar-row>         
       <button mat-raised-button type="submit" color="accent">

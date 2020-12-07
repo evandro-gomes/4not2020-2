@@ -23,7 +23,7 @@ controller.listar = async (req, res) => {
     try{
     //Tras todos os cursos cadastrados
     let dados = await Turma.find()
-        .populate('curso', "nome")
+        .populate('curso', "nome nivel")
         .populate('professor')
         .populate('sala_aula', "nome capacidade")
     res.send(dados) // Vai com status HTTP 200: OK
